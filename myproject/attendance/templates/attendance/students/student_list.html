@@ -1,0 +1,12 @@
+<h1> Estudiantes <h1>
+{%block content%}
+{% if students_list %}
+<ul>
+    {% for students in students_list %}
+    <li><a href="{{students.get_absolute_url}}"> {{students.fname}} {{students.lname}} </a></li>
+    
+    {% endfor %}
+</ul>
+{% endif %}
+
+{%endblock content%}
